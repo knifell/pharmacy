@@ -101,3 +101,11 @@ button {
     align-items: center;
   }
 }
+
+@media (max-width: 768px) {
+  .profile-form input,
+  .profile-form button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
