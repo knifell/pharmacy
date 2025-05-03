@@ -17,7 +17,6 @@
 
     <!-- Шапка -->
     <header>
-       <div id="mobile-menu">
         <nav>
             <div class="logo">Аптека Онлайн</div>
             <ul>
@@ -28,7 +27,6 @@
                 <button id="menu-toggle" class="menu-button">&#9776;</button>
             </ul>
         </nav>
-            </div>
     </header>
 
     <!-- Баннер -->
@@ -93,17 +91,8 @@
             <button type="submit" class="btn-submit-review">Отправить отзыв</button>
         </form>
     </div>
-
     <!-- Уведомление (toast) -->
     <div id="toast" class="toast"></div>
-
     <script src="script.js"></script>
-    <script>
-  document.getElementById("menu-toggle").addEventListener("click", function () {
-    document.getElementById("mobile-menu").classList.toggle("show");
-  });
-</script>
-
 </body>
 </html>
-
