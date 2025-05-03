@@ -1,19 +1,19 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Аптека Онлайн</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css"> <!-- Убедись, что всё в одном файле -->
     <script defer src="script.js"></script>
 </head>
 <body>
+
     <!-- Переключатель темы -->
     <label class="theme-switch">
         <input type="checkbox" id="theme-toggle">
         <span class="slider"></span>
     </label>
-
 
     <!-- Шапка -->
     <header>
@@ -34,7 +34,6 @@
         <h1>Ваше здоровье – наш приоритет</h1>
         <p>Лучшие лекарства по доступным ценам с быстрой доставкой</p>
     </section>
-
 
     <!-- Фильтр по категориям -->
     <section class="categories">
@@ -63,21 +62,6 @@
         <p>Мы предлагаем широкий ассортимент лекарств с доставкой по всему миру. Качество и сервис – наша главная цель!</p>
     </section>
 
-    <!-- Уведомление при добавлении в корзину -->
-    <div id="cart-notification" class="cart-notification hidden">Товар добавлен в корзину!</div>
-</body>
-</html>
-
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Аптека Онлайн</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <!-- Тут остальные элементы сайта -->
     <!-- Кнопка подписки -->
     <div class="subscribe-section">
         <button id="subscribe-btn" class="btn-subscribe">Подписаться</button>
@@ -91,8 +75,10 @@
             <button type="submit" class="btn-submit-review">Отправить отзыв</button>
         </form>
     </div>
-    <!-- Уведомление (toast) -->
+
+    <!-- Уведомления -->
+    <div id="cart-notification" class="cart-notification hidden">Товар добавлен в корзину!</div>
     <div id="toast" class="toast"></div>
-    <script src="script.js"></script>
+
 </body>
 </html>
