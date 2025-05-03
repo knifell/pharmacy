@@ -1,4 +1,4 @@
-﻿body {
+body {
     font-family: 'Segoe UI', sans-serif;
     margin: 0;
     background: #f5f5f5;
@@ -15,19 +15,23 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
-    nav ul {
-        list-style: none;
-        display: flex;
-        gap: 20px;
-    }
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
 
-    nav a {
-        color: white;
-        text-decoration: none;
-        font-weight: bold;
-    }
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
 
 main {
     max-width: 600px;
@@ -45,6 +49,7 @@ input, button {
     margin: 1em 0;
     border: 1px solid #ccc;
     border-radius: 8px;
+    box-sizing: border-box;
 }
 
 button {
@@ -56,9 +61,9 @@ button {
     transition: background 0.3s ease;
 }
 
-    button:hover {
-        background: #125da1;
-    }
+button:hover {
+    background: #125da1;
+}
 
 .hidden {
     display: none;
@@ -69,14 +74,15 @@ button {
     align-items: center;
     gap: 15px;
     margin-bottom: 1em;
+    flex-wrap: wrap;
 }
 
-    .avatar-container img {
-        width: 80px;
-        height: 80px;
-        border-radius: 50%;
-        object-fit: cover;
-    }
+.avatar-container img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+}
 
 .error {
     color: red;
@@ -90,22 +96,57 @@ button {
     border-radius: 10px;
 }
 
+/* ====== Адаптация профиля под мобильные ====== */
 .profile-content {
-  display: flex;
-  gap: 20px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.profile-form {
+    flex: 1;
 }
 
 @media (max-width: 768px) {
-  .profile-content {
-    flex-direction: column;
-    align-items: center;
-  }
-}
+    header {
+        padding: 1em;
+        text-align: center;
+    }
 
-@media (max-width: 768px) {
-  .profile-form input,
-  .profile-form button {
-    width: 100%;
-    margin-bottom: 10px;
-  }
+    nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    main {
+        margin: 1em;
+        padding: 1.5em;
+    }
+
+    .profile-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .avatar-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .avatar-container img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .profile-form input,
+    .profile-form button {
+        width: 100%;
+        margin-bottom: 12px;
+    }
+
+    .extras {
+        font-size: 0.95em;
+    }
 }
