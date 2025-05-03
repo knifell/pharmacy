@@ -551,3 +551,35 @@ header nav ul {
     .theme-switch input:checked + .slider:before {
         transform: translateX(20px); /* Перемещение ползунка */
     }
+/* ===== Адаптивность для мобильных устройств ===== */
+@media (max-width: 768px) {
+  header nav {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+
+  .banner h1 {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .container {
+    padding: 10px;
+  }
+
+  .product-card {
+    width: 100% !important;
+    margin: 10px 0;
+  }
+
+  .product-card img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  footer {
+    flex-direction: column;
+    text-align: center;
+  }
+}
