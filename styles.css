@@ -583,3 +583,31 @@ header nav ul {
     text-align: center;
   }
 }
+
+.menu-button {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: #333;
+  cursor: pointer;
+  padding: 10px;
+}
+
+@media (max-width: 768px) {
+  .menu-button {
+    display: block;
+  }
+
+  #mobile-menu {
+    display: none;
+  }
+
+  #mobile-menu.show {
+    display: block;
+  }
+
+  nav {
+    flex-direction: column;
+  }
+}
